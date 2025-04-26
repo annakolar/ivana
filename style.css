@@ -1,0 +1,135 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #fdfaf7;
+  color: #111;
+}
+header {
+  background: #8b6f4d;
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  position: relative;
+}
+
+.header-content {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  position: relative;
+  z-index: 2;
+}
+
+.logo {
+  height: 200px; /* prilagodi višino logotipa */
+}
+
+.header-text {
+  text-align: center;
+  flex: 1;
+}
+
+header::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  z-index: 2;
+}
+.header-buttons {
+  z-index: 2;
+  margin-top: 1rem;
+}
+.btn {
+  padding: 0.8rem 1.5rem;
+  border: 2px solid gold;
+  background: transparent;
+  color: white;
+  font-weight: bold;
+  margin: 0 0.5rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.btn:hover {
+  background: gold;
+  color: #111;
+}
+.section {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+.about {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.about img {
+  width: 300px;
+  border: 2px solid gold;
+}
+.about-text {
+  font-size: 1.2rem;
+  font-style: italic;
+}
+.signature {
+  margin-top: 1rem;
+  font-family: 'Playfair Display', serif;
+}
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+.service-card {
+  border: 1px solid #e0d9ce;
+  padding: 2rem;
+  text-align: center;
+  background: white;
+  transition: transform 0.3s;
+}
+.service-card:hover {
+  transform: translateY(-10px);
+}
+.service-card h3 {
+  margin-bottom: 0.5rem;
+}
+.service-card p {
+  font-weight: bold;
+  color: #8b6f4d;
+}
+.hidden {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+footer a {
+  margin: 0 10px;
+  color: #8b6f4d;
+  font-size: 2rem;
+  transition: color 0.3s;
+}
+
+footer a:hover {
+  color: gold;
+}
